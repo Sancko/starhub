@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Customer.delete_all
-Issue.delete_all
-Product.delete_all
-Review.delete_all
+# Customer.delete_all
+# Issue.delete_all
+# Product.delete_all
+# Review.delete_all
 
 # customers
 fred = Customer.create(first_name: 'fred', last_name: 'Hans', username:'fred12', email: 'fred12@gmail.com',
@@ -26,8 +26,8 @@ food = Product.create(name:'food', code:'1243-asd', category:'food')
 
 # review
 Review.create(customer: fred, product:soap, rating:4, comment:'That was good')
-Review.create(customer: ted, product:table, rating:3, comment:'That was awful')
-Review.create(customer: bob, product:table, rating:5, comment:'That was great')
+Review.create(customer: fred, product:table, rating:3, comment:'That was awful')
+Review.create(customer: fred, product:table, rating:5, comment:'That was great')
 
 #issues
 Issue.create(customer: fred, product:food, severity: 'COSMETIC', comment:'Inappropriate condition')

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: bob
+  product: monopoly
+  rating: 2
+  comment: MyText
+
+two:
+  customer: bob
+  product: backgammon
+  rating: 2
+  comment: MyTex
+
+tree:
+  customer: jack
+  product: backgammon
+  rating: 4
+  comment: MyText
+
+four:
+  customer: bob
+  product: duke
+  rating: 5
+  comment: MyText
+
+five:
+  customer: jack
+  product: monopoly
+  rating: 3
+  comment: MyText

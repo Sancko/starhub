@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+backgammon:
+  name: BackGammon 2014
+  code: BG14
+  category: BOARD
+
+monopoly:
+  name: Monopoly
+  code: MPSV
+  category: BOARD
+
+duke:
+  name: Duke cooke'em
+  code: DCEM
+  category: SOOTER
+
+stratego:
+  name: Stratego
+  code: STGO
+  category: STRATEGY
+

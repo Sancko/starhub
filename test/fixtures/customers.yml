@@ -4,16 +4,20 @@ bob:
   first_name: bob
   last_name: right
   username: b0b
+  email: example@df.co
 jack:
   first_name: bil
   last_name: both
   username: jack
+  email: examp3le@df.co
 jan:
   first_name: bob
   last_name:
   username: b0b1
+  email: exampl1e@df.co
 bil:
   first_name: jack
   last_name: left
   username: jack
+  email: exampl2e@df.co
 
