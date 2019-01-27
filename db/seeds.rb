@@ -1,34 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+ActiveRecord::Base.transaction do
 
-# Customer.delete_all
-# Issue.delete_all
-# Product.delete_all
-# Review.delete_all
+  # First, empty the DB
+  Review.destroy_all
+  Issue.destroy_all
+  Product.destroy_all
+  Customer.destroy_all
 
-# customers
-fred = Customer.create(first_name: 'fred', last_name: 'Hans', username:'fred12', email: 'fred12@gmail.com',
-                       password:'password')
-ted = Customer.create(first_name: 'ted', last_name: 'Hans', username:'ted13', email: 'ted2@gmail.com',
-                       password:'password')
-bob = Customer.create(first_name: 'bob', last_name: 'Hans', username:'bob1232', email: 'bob@gmail.com',
-                       password:'password')
+  # Customers
+  fred = Customer.create(first_name: 'fred', last_name: 'heath', username: 'freddo', email: 'fred@gmail.com', password: 'babushka')
+  ben = Customer.create(first_name: 'ben', last_name: 'smith', username: 'batman', email: 'ben@gmail.com', password: 'babushka')
+  jerry = Customer.create(first_name: 'jerry', last_name: 'jones', username: 'bsm776', email: 'jerry@gmail.com', password: 'babushka')
 
-# products
-soap = Product.create(name:'Soap', code:'1234fd', category:'home')
-table = Product.create(name:'Desck', code:'dd-12-4', category:'Furniture')
-food = Product.create(name:'food', code:'1243-asd', category:'food')
+  # Products
+  wolfen = Product.create(name: 'Wolfenstein', code: 'WLFN', category: 'SHOOTER')
+  zombies = Product.create(name: 'Age Of Zombies', code: 'AOZM', category: 'RPG')
+  larry = Product.create(name: 'Laounge Larry 2106', code: 'LL16', category: 'ARCADE')
 
-# review
-Review.create(customer: fred, product:soap, rating:4, comment:'That was good')
-Review.create(customer: fred, product:table, rating:3, comment:'That was awful')
-Review.create(customer: fred, product:table, rating:5, comment:'That was great')
+  # reviews
+  Review.create(customer: fred, product: zombies, rating: 4, comment: 'that was a scary experience')
+  Review.create(customer: fred, product: larry, rating: 5, comment: 'back in the 80s dude!')
+  Review.create(customer: jerry, product: larry, rating: 3, comment: 'Not as sleek as I remember')
 
-#issues
-Issue.create(customer: fred, product:food, severity: 'COSMETIC', comment:'Inappropriate condition')
-Issue.create(customer: bob, product:table, severity: 'MINOR', comment:'Left some part')
+  # Issues
+  Issue.create(customer: ben, product: larry, severity: 'COSMETIC', comment: 'pixelation at the top corner of the screen')
+  Issue.create(customer: jerry, product: larry, severity: 'MINOR', comment: 'Jerry cannot open door at level 2')
+
+end
