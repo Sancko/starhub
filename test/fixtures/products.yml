@@ -2,21 +2,21 @@
 
 backgammon:
   name: BackGammon 2014
-  code: BG14
+  code: BG2014
   category: BOARD
 
 monopoly:
   name: Monopoly
-  code: MPSV
+  code: BG2014
   category: BOARD
 
 duke:
   name: Duke cooke'em
-  code: DCEM
+  code: BG2014
   category: SOOTER
 
 stratego:
   name: Stratego
-  code: STGO
+  code: BG2014
   category: STRATEGY
 
